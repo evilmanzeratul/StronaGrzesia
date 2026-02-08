@@ -27,7 +27,7 @@ const Footer = () => {
   </p>
 
   <p className="mt-2 text-xs leading-relaxed">
-    This project uses the Swiss Ephemeris Free Edition under AGPL v3. The source code of this project is available <a href="https://github.com/<twoje-repo>" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">here</a> in compliance with AGPL.
+    This project uses the Swiss Ephemeris Free Edition under AGPL v3. The source code of this project is available <a href="https://github.com/evilmanzeratul/StronaGrzesia" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">here</a> in compliance with AGPL.
   </p>
 </div>
 
