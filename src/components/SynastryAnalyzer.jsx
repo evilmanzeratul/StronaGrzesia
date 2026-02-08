@@ -179,7 +179,8 @@ b1.forEach(p1 => {
   return (
     <div style={styles.container}>
       <h2 style={styles.title}>Analiza Synastrii</h2>
-      <p style={styles.info}>Kalkulator oddziaływania energii między planetami.</p>
+      <p style={styles.info}>Kalkulator oddziaływania energii między planetami. </p>
+      <p style={styles.info}>jak nie widać zapisanych osób odświerz stronę </p>
 
       <div style={styles.selectors}>
         <div style={styles.selectGroup}>
