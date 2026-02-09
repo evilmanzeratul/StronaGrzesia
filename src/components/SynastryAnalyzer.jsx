@@ -215,14 +215,14 @@ b1.forEach(p1 => {
           <div style={styles.mainScoreCard}>
             <span style={styles.cardLabel}>Wynik Core (Światła + Osobiste)</span>
             <span style={styles.cardValue}>{results.stats.core.score.toFixed(1)}</span>
-            <small style={{color: '#888'}}>Główne spoiwo relacji - jeśli tu jest nisko, reszta może nie wystarczyć.</small>
+            <small style={{color: '#888'}}>Główne spoiwo relacji - jeśli tu jest nisko, reszta może nie wystarczyć. dla bliźniaków lub osób urodzonych w małym interwale czasu wartości mogą być zawyżone o 50 punktów</small>
             {renderMiniStat(results.stats.core)}
           </div>
 
           <h3 style={styles.sectionHeading}>Potencjał Relacji</h3>
           <div style={{ ...styles.secondaryGrid, marginBottom: '30px' }}>
             <div style={{ ...styles.miniCard, borderTop: '4px solid #e91e63' }}>
-              <span style={styles.miniLabel}>🔥 ŁÓŻKO / CHEMIA</span>
+              <span style={styles.miniLabel}>🔥 ŁUŻKO / CHEMIA</span>
               <strong style={styles.miniValue}>{results.stats.sex.score.toFixed(1)}</strong>
               {renderMiniStat(results.stats.sex)}
             </div>
