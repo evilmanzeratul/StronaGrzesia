@@ -45,6 +45,7 @@ const getPlanetColor = (name) => {
 
 const calculateOrbStrength = (diff, aspectAngle) => {
   const x = Math.abs(diff - aspectAngle);
+  
   if (x <= HiGHORB) return 1;
   if (x > MAXORB) return 0;
   return 1 - (x - HiGHORB) / (MAXORB - HiGHORB);
@@ -206,7 +207,7 @@ b1.forEach(p1 => {
           {/* SEKCJA WPŁYWU OSOBISTEGO */}
           <div style={{ ...styles.mainScoreCard, backgroundColor: '#fdfdfd', textAlign: 'left' }}>
             <h3 style={{ ...styles.sectionHeading, marginBottom: '25px' }}>⚖️ Balans Wpływu (Kto na kogo działa)</h3>
-            <InfluenceBar label="CHEMIA / ŁUŻKO" valA={results.influence.a_on_b.sex} valB={results.influence.b_on_a.sex} color="#e91e63" />
+            <InfluenceBar label="CHEMIA / AKTYWNOŚĆ FIZYCZNA" valA={results.influence.a_on_b.sex} valB={results.influence.b_on_a.sex} color="#e91e63" />
             <InfluenceBar label="MENTAL / ROZMOWA" valA={results.influence.a_on_b.talk} valB={results.influence.b_on_a.talk} color="#2196f3" />
             <InfluenceBar label="EMOCJE / WIĘŹ" valA={results.influence.a_on_b.emotions} valB={results.influence.b_on_a.emotions} color="#4caf50" />
             <p style={{ fontSize: '11px', color: '#999', marginTop: '10px' }}>* Wyższa wartość oznacza osobę, która bardziej "wnosi" daną energię do związku.</p>
@@ -222,7 +223,7 @@ b1.forEach(p1 => {
           <h3 style={styles.sectionHeading}>Potencjał Relacji</h3>
           <div style={{ ...styles.secondaryGrid, marginBottom: '30px' }}>
             <div style={{ ...styles.miniCard, borderTop: '4px solid #e91e63' }}>
-              <span style={styles.miniLabel}>🔥 ŁUŻKO / CHEMIA</span>
+              <span style={styles.miniLabel}>🔥 AKTYWNOŚĆ FIZYCZNA / CHEMIA</span>
               <strong style={styles.miniValue}>{results.stats.sex.score.toFixed(1)}</strong>
               {renderMiniStat(results.stats.sex)}
             </div>

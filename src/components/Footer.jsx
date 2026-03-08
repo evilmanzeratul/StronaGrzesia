@@ -1,45 +1,110 @@
 import React from 'react';
 
 const Footer = () => {
+  // Definicje stylów jako obiekty JS
+  const styles = {
+    footer: {
+      width: '100%',
+      padding: '40px 20px',
+      backgroundColor: '#f8fafc',
+      borderTop: '1px solid #e2e8f0',
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      color: '#64748b'
+    },
+    container: {
+      maxWidth: '800px',
+      margin: '0 auto',
+      textAlign: 'center'
+    },
+    card: {
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      padding: '24px',
+      borderRadius: '12px',
+      border: '1px solid #cbd5e1',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
+    },
+    mainText: {
+      fontSize: '15px',
+      color: '#334155',
+      marginBottom: '16px'
+    },
+    bold: {
+      fontWeight: 'bold',
+      color: '#0f172a'
+    },
+    badge: {
+      fontSize: '10px',
+      textTransform: 'uppercase',
+      letterSpacing: '1px',
+      color: '#94a3b8',
+      borderTop: '1px solid #e2e8f0',
+      paddingTop: '12px',
+      marginTop: '12px',
+      display: 'block'
+    },
+    details: {
+      fontSize: '12px',
+      lineHeight: '1.6',
+      marginTop: '12px',
+      color: '#475569'
+    },
+    link: {
+      color: '#2563eb',
+      textDecoration: 'underline',
+      fontWeight: '500'
+    },
+    bottomText: {
+      marginTop: '24px',
+      fontSize: '11px',
+      color: '#94a3b8',
+      fontStyle: 'italic'
+    }
+  };
+
   return (
-    <footer className="p-8 bg-gray-100 text-gray-600 text-sm border-t border-gray-200">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="bg-white/50 p-4 rounded-lg border border-gray-300">
-          <p className="text-gray-700">
+    <footer style={styles.footer}>
+      <div style={styles.container}>
+        <div style={styles.card}>
+          <p style={styles.mainText}>
             Dane astronomiczne i obliczenia pozycji planet oparte są na oprogramowaniu 
-            <span className="font-bold text-gray-900"> Swiss Ephemeris</span>.
+            <span style={styles.bold}> Swiss Ephemeris</span>.
           </p>
 
-          <div className="mt-3 pt-3 border-t border-gray-200 text-[10px] uppercase tracking-wider text-gray-500">
-            Informacja licencyjna
-          </div>
+          <span style={styles.badge}>Informacja licencyjna</span>
 
-          <p className="mt-2 text-xs leading-relaxed">
+          <p style={styles.details}>
             The Swiss Ephemeris Free Edition is a professional-standard library for astrological calculations. 
-            It is licensed under the <span className="font-semibold">GNU Affero General Public License (AGPL v3)</span>. <br />
+            It is licensed under the <strong>GNU Affero General Public License (AGPL v3)</strong>. <br />
             Copyright &copy; by <a 
               href="https://www.astro.com/swisseph/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-blue-600 underline hover:text-blue-800 transition-colors"
+              style={styles.link}
             >
               Astrodienst AG, Switzerland
             </a>. 
-            Wszelkie prawa do baz danych i algorytmów obliczeniowych należą do ich twórców.
+            Wszelkie prawa do baz danych i algorytmów należą do ich twórców.
           </p>
 
-          <p className="mt-2 text-xs leading-relaxed">
-            This project uses the Swiss Ephemeris Free Edition under AGPL v3. The source code of this project is available <a href="https://github.com/evilmanzeratul/StronaGrzesia" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">here</a> in compliance with AGPL.
+          <p style={styles.details}>
+            This project uses the Swiss Ephemeris Free Edition under AGPL v3. The source code is available 
+            <a 
+              href="https://github.com/evilmanzeratul/StronaGrzesia" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={styles.link}
+            > tutaj </a> 
+            w celu zachowania zgodności z licencją.
           </p>
         </div>
 
-        <p className="mt-6 text-[10px] text-gray-400 italic">
-          Strona została stworzona w celach edukacyjnych/rozrywkowych. Dane wygenerowane przy pomocy narzędzi Open Source.
+        <p style={styles.bottomText}>
+          Strona została stworzona w celach edukacyjnych i rozrywkowych. <br />
+          Dane wygenerowane przy pomocy narzędzi Open Source.
         </p>
       </div>
     </footer>
   );
 };
-
 
 export default Footer;
