@@ -75,14 +75,12 @@ const App = () => {
 
         <main>
           <div style={styles.sectionBox}>
-            <span style={styles.label}>Moduł Obliczeniowy</span>
             <SynastryAnalyzer />
           </div>
 
           <hr style={styles.divider} />
 
           <div style={styles.sectionBox}>
-            <span style={styles.label}>Wizualizacja Danych (Synastria)</span>
             <KosmogramCore />
           </div>
         </main>
